@@ -11,6 +11,7 @@
   --decorative-bracket-clr: #353430;
   --menu-clr: #353430;
   --rec-decoration-clr: transparent;
+  --bg-clr: #ffc2e6;
 
   /* Состояния кнопок */
   --button-hover-clr: #32312d66;
@@ -30,6 +31,7 @@
     --decorative-bracket-clr: #353430;
     --menu-clr: #353430;
     --rec-decoration-clr: transparent;
+    --bg-clr: #ffc2e6;
 
     /* Состояния кнопок */
     --button-hover-clr: #32312d66;
