@@ -13,6 +13,7 @@
   --headers-clr: #ff0070;
   --rec-decoration-clr: #ff0070;
   --bg-clr: #000028;
+  --focus-outline-clr: #ff0070;
 
   /* Состояния кнопок */
   --button-hover-clr: #ff007066;

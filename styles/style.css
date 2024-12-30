@@ -63,9 +63,11 @@
 .accented-link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-clr);
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
 
   &:hover {
-    text-decoration: underline;
+    border-bottom: 2px solid var(--text-clr);
   }
 
   &:focus {
@@ -89,14 +91,10 @@
   }
 }
 
-.why-focus {
+.section--breakdown {
   @media (min-width: 768px) {
-    display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: var(--gap);
   }
-
-
 }
 
 .what-section__heading {
@@ -112,15 +110,6 @@
 .what-section__list {
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.tips {
-  display: grid;
-  gap: var(--gap);
-
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 2fr;
   }
 }
 
@@ -167,38 +156,57 @@
   block-size: 7px;
 }
 
+/* Секции */
 .decorated-zone {
   position: relative;
   min-block-size: 97vh;
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .decorated-zone {
     min-block-size: 96vh;
   }
+}
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+  .decorated-zone {
     min-block-size: 94.7vh;
   }
 }
 
-.decorated-zone::before {
-  content: '';
-  position: absolute;
-  border-top: 1px solid var(--decorative-bracket-clr);
-  border-right: 1px solid var(--decorative-bracket-clr);
-  inline-size: 25px;
-  block-size: 25px;
-  inset-inline-end: 0;
-  inset-block-start: 0;
-}
-
+.decorated-zone::before,
 .decorated-zone::after {
   content: '';
   position: absolute;
-  border-bottom: 1px solid var(--decorative-bracket-clr);
-  border-left: 1px solid var(--decorative-bracket-clr);
   inline-size: 25px;
   block-size: 25px;
-  inset-block-end: 0;
+  border: 1px solid var(--decorative-bracket-clr);
+}
+
+.decorated-zone::before {
+  border-bottom: none;
+  border-left: none;
+  inset-inline-end: 20px;
+  inset-block-start: 20px;
+}
+
+.decorated-zone::after {
+  border-top: none;
+  border-right: none;
+  inset-inline-start: 20px;
+  inset-block-end: 20px;
+}
+
+@media (max-width: 767px) {
+  .decorated-zone::before {
+    inset-inline-end: 10px;
+    inset-block-start: 10px;
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: 10px;
+    inset-block-end: 10px;
+  }
 }
 
 .header__theme-menu {
@@ -247,7 +255,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-clr);
+  border-bottom: 1px solid var(--focus-outline-clr);
   outline: none;
 }
 

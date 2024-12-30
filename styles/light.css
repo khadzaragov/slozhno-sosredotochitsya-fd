@@ -12,6 +12,7 @@
   --menu-clr: #353430;
   --rec-decoration-clr: transparent;
   --bg-clr: #ffc2e6;
+  --focus-outline-clr: #808080;
 
   /* Состояния кнопок */
   --button-hover-clr: #32312d66;
@@ -32,6 +33,7 @@
     --menu-clr: #353430;
     --rec-decoration-clr: transparent;
     --bg-clr: #ffc2e6;
+    --focus-outline-clr: #808080;
 
     /* Состояния кнопок */
     --button-hover-clr: #32312d66;
